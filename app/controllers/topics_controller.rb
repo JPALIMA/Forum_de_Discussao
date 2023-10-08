@@ -1,10 +1,10 @@
-class TopicsController < ApplicationController
+class TopicController < ApplicationController
   def index
     @topics = Topic.all
   end
 
   def show
-    @topic= Topic.find(params[:id])
+    @topic = Topic.find(params[:id])
   end
 
   def new
@@ -15,15 +15,15 @@ class TopicsController < ApplicationController
     @topic = Topic.new(topic_params)
 
     if @topic.save
-      redirect_to @topic, notice: "Tópico creado com sucesso!"
+      redirect_to @topic, notice: "topico criado com sucesso!"
     else
       render 'new'
+    end
+  end
+
+  private
+
+  def topic_params
+    params.require(:topic).permit(:title, :content)
   end
 end
-
-private
-
-def topic_params
-  params.require(:topic).permit(:title, :content)
-end
-
