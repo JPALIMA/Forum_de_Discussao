@@ -1,2 +1,18 @@
-<h1>Topics#show</h1>
+<h1><%= @topic.title %></h1>
 <p>Find me in app/views/topics/show.html.erb</p>
+
+<h2>Respostas:</h2>
+<%= form_with(model: @reply, url: replies_path) do |form| %>
+     <div class="field">
+          <%= form.label :content, "Resposta:" %>
+          <%= form.text_area :content %>
+     </div>
+     <div class="actions">
+          <%= form.submit "Enviar Resposta" %>
+     </div>
+<% end %>
+<ul>
+     <% @topic.replies.each do |reply| %>
+          <li><%= reply.content %></li>
+     <% end %>
+</ul>
