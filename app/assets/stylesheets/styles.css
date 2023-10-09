@@ -1,0 +1,49 @@
+/* Estilo para o cabeçalho */
+h1 {
+     font-size: 24px;
+     color: #333;
+     
+}
+
+/* Estilo para a lista de tópicos */
+ul {
+     list-style-type: nome;
+     padding: 0;
+}
+
+li {
+     margin-bottom: 10px;
+}
+
+/* Estilo para links */
+a {
+     text-decoration: nome;
+     color: #007bff;
+}
+
+a:hover {
+     text-decoration: underline;
+}
+
+/* Estilo para formulários */
+form {
+     margin-top: 20px;
+}
+
+.field {
+     margin-bottom: 10px;
+}
+
+/* Estilo para botões */
+input[type="submit"] {
+     background-color: #007bff;
+     color: #fff;
+     padding: px 10px;
+     border: nome;
+     cursor: pointer;
+
+}
+
+inpul[type="submit"]:hover {
+     backgroud-color, :#0056b3;
+}
