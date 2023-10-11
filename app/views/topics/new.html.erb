@@ -1,22 +1,28 @@
 <h1>Criar Novo Tópico</h1>
 
 <%= form_with(model: @topic, url: topics_path) do |form| %>
-     <div class="field">
-          <%= form.label :content, "Conteúdo do Tópico:" %>
-          <%= form.text_area :content %>
-     </div>
-     <div class="field">
-          <%= form.label :content, "Conteúdo do Tópico:" %>
-          <%= form.text_area :content %>
-     </div>
-     <div class="actions">
-          <%= form.submit "Criar Tópico" %>
-     </div>
+  <div class="field">
+    <%= form.label :title, "Título do Tópico:" %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :content, "Conteúdo do Tópico:" %>
+    <%= form.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= form.submit "Criar Tópico" %>
+  </div>
 <% end %>
 
 <%= link_to "Voltar para a Lista de Tópicos", topics_path %>
 
-<h1> Lista de Tópicos</h1>
-<ul
->
+<h1>Lista de Tópicos</h1>
+<ul>
+  <% @topics.each do |topic| %>
+    <li>
+      <%= link_to topic.title, topic_path(topic) %>
+    </li>
+  <% end %>
+</ul>
 
+<%= link_to "Criar Novo Tópico", new_topic_path, class: "btn btn-primary" %>
