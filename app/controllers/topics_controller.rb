@@ -1,4 +1,4 @@
-class TopicController < ApplicationController
+class Topicontroller < ApplicationController
   def index
     @topics = Topic.all
   end
@@ -15,7 +15,7 @@ class TopicController < ApplicationController
     @topic = Topic.new(topic_params)
 
     if @topic.save
-      redirect_to @topic, notice: "Tópico criado com sucesso!"
+      redirect_to @topic, notice: "Tópic criado com sucesso!"
     else
       render 'new'
     end
@@ -24,6 +24,6 @@ class TopicController < ApplicationController
   private
 
   def topic_params
-    params.require(:topic).permit(:title, :content)
+    params.require(:topic).permit(title, :content)
   end
 end
