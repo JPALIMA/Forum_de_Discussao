@@ -14,15 +14,4 @@
   </div>
 <% end %>
 
-<%= link_to "Voltar para a Lista de Tópicos", topics_path %>
-
-<h1>Lista de Tópicos</h1>
-<ul>
-  <% @topics.each do |topic| %>
-    <li>
-      <%= link_to topic.title, topic_path(topic) %>
-    </li>
-  <% end %>
-</ul>
-
-<%= link_to "Criar Novo Tópico", new_topic_path, class: "btn btn-primary" %>
+<%= link_to "Voltar para Lista de Tópicos", topics_path %>
