@@ -5,3 +5,4 @@ Rails.application.routes.draw do
   # Define a rota raiz como a página de listagem de tópicos
   root 'topics#index'
 end
+
