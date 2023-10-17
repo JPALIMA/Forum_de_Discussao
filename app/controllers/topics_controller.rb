@@ -1,9 +1,9 @@
-class TopicsController < ApplicationController
+class TopicsController < ApplicationController 
   def index
     @topics = Topic.all
   end
 
-  def show
+  def show 
     @topic = Topic.find(params[:id])
   end
 
@@ -15,7 +15,7 @@ class TopicsController < ApplicationController
     @topic = Topic.new(topic_params)
 
     if @topic.save
-      redirect_to @topic, notice:"Tópico criado com sucesso!"
+      redirect_to @topic, notice: "Topico criado com sucesso!"
     else
       render 'new'
     end
