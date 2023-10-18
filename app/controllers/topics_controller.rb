@@ -1,9 +1,9 @@
-class TopicsController < ApplicationController 
+class TopicsController < ApplicationController
   def index
     @topics = Topic.all
   end
 
-  def show 
+  def show
     @topic = Topic.find(params[:id])
   end
 
