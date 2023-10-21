@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
-  def index
+  def teste
+    render plain: 'Esta é uma rota de teste. Funcionou!'
   end
 end
