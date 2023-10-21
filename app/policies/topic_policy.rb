@@ -1,9 +1,13 @@
-class TopicPolicy
+class TopicPolicy < ApplicationPolicy
   attr_reader :user, :topic
 
   def initialize(user, topic)
     @user = user
     @topic = topic
+  end
+
+  def create?
+    user.present? # Qualquer usário logado pode criar um topico
   end
 
   def update?
