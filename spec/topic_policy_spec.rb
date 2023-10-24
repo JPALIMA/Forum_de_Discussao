@@ -2,8 +2,10 @@
 require 'rails_helper'
 
 RSpec.describe TopicPolicy do
-     let(:topic) { topic.new}
+     let(:user) { create(:user) }
      let(:topic) { create(:topic, user: user) }
+
+     subject { described_class.new(user, topic) }
 
      it "permite que qualquer usuário crie um tópico" do
           expect(subject.create?).to be true
@@ -19,5 +21,6 @@ RSpec.describe TopicPolicy do
           expect(described_class.new(another_user, topic).update?).to be false
      end
 end
+
 
 
