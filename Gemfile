@@ -7,6 +7,8 @@ gem 'devise'
 
 gem 'pundit'
 
+gem 'factory_bot_rails'
+
 group :development, :test do
   gem 'rspec-rails'
 end
