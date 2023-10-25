@@ -7,12 +7,11 @@ RSpec.describe TopicPolicy do
 
      subject { described_class.new(user, topic) }
 
-     it "permite que qualquer usuário crie um tópico" do
+     it "permite que qualquer usuário crie um tópico" do 
           expect(subject.create?).to be true
      end
 
      it "permite que apenas o criador do tópico o atualize" do
-          topic.user = user
           expect(subject.update?).to be true
      end
 
@@ -21,6 +20,3 @@ RSpec.describe TopicPolicy do
           expect(described_class.new(another_user, topic).update?).to be false
      end
 end
-
-
-
