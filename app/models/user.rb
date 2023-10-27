@@ -1,6 +1,9 @@
+# app/models/user.rb
 class User < ApplicationRecord
-     #Adicionando atributos e associações 
-     validates :email, presence: true, uniqueness: true
+     validates :name, presence: true
+     validates :email, presence: true
      validates :password, presence: true
-end
-
+   
+     # Outros atributos e associações do usuário
+   end
+   
