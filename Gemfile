@@ -7,6 +7,8 @@ gem 'devise'
 
 gem 'pundit'
 
+gem 'faker'
+
 gem 'factory_bot_rails'
 
 group :development, :test do
