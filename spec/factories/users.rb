@@ -6,4 +6,3 @@ FactoryBot.define do
           password { "senha123" } #Você pode definir uma senha padrão, se necessário
      end
 end
-   
