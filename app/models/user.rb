@@ -5,5 +5,5 @@ class User < ApplicationRecord
      validates :password, presence: true
    
      # Outros atributos e associações do usuário
-   end
+end
    
