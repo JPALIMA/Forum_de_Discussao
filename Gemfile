@@ -9,7 +9,9 @@ gem 'pundit'
 
 gem 'faker'
 
-gem 'factory_bot_rails'
+group :teste do
+  gem 'factory_bot_rails'
+end
 
 group :development, :test do
   gem 'rspec-rails'
