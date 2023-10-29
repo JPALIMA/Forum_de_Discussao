@@ -1,9 +1,9 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 require 'spec_helper'
 #Aplicanto no arquivo spec/rails_helper.rb (ou spec/spec_helper.rb, dependendo da versão do RSpec) requer o 'FactoryBot'.
-require 'factory_bot'
-ENV['RAILS_ENV'] ||= 'test'
-require_relative '../config/environment'
+require 'factory_bot_rails'
+FactoryBot.definition_file_paths = [File.expand_path('../factories', __FILE__)]
+FactoryBot.find_definitions
 # Prevent database truncation if the environment is production
 abort("The Rails environment is running in production mode!") if Rails.env.production?
 require 'rspec/rails'
