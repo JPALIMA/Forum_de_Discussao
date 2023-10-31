@@ -9,12 +9,10 @@ gem 'pundit'
 
 gem 'faker'
 
-group :teste do
-  gem 'factory_bot_rails'
-end
-
 group :development, :test do
   gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
 end
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
