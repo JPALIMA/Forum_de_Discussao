@@ -1,6 +1,9 @@
 #o arquivo spec/rails_helper.rb (ou spec/spec_helper.rb, dependendo da versão do RSpec) requer o 'FactoryBot'
+require 'database_cleaner'
 require 'factory_bot'
-config.before(:suite) do
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+  config.before(:suite) do
   DatabaseCleaner.strategy = :transaction
   DatabaseCleaner.clean_with(:truncation)
 end
