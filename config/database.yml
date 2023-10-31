@@ -17,8 +17,14 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: db/test.sqlite3
+adapter: postgresql
+database: myapp_test
+host: localhost
+port: 5432
+username: seu_nome_de_usuario
+password: sua_senha
+
+
 
 production:
   <<: *default
