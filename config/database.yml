@@ -1,7 +1,7 @@
-# SQLite. Versions 3.8.0 and up are supported.
+#SqLite. As versões 3.8.0 e superiores são suportadas.
 #   gem install sqlite3
 #
-#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   Certifique-se de que a gem SQLite 3 esteja definida em seu Gemfile
 #   gem "sqlite3"
 #
 default: &default
@@ -13,19 +13,24 @@ development:
   <<: *default
   database: db/development.sqlite3
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
+#O banco de dados definido como "teste" será apagado e gerando
+#novamente a partir do seu banco de dados de desenvolvimento quando
+#você execute "rake".
+#Não defina este banco de dados como desenvolvimento ou produção.
 test:
-adapter: postgresql
-database: myapp_test
-host: localhost
-port: 5432
-username: seu_nome_de_usuario
-password: sua_senha
-
-
+  adapter: postgresql
+  database: myapp_test
+  host: localhost
+  port: 5432
+  username: postgres
+  password: bola
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: myapp_production
+  host: localhost
+  port: 5432
+  username: postgres
+  password: bola
+
