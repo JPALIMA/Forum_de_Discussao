@@ -9,11 +9,15 @@ gem 'pundit'
 
 gem 'faker'
 
-group :development, :test do
-  gem 'rspec-rails'
-  gem 'database_cleaner'
-  gem 'factory_bot_rails'
+group :development do
+  gem 'spring'
 end
+
+
+gem 'rspec-rails'
+gem 'database_cleaner'
+gem 'factory_bot_rails'
+
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.8"
